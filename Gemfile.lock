@@ -305,6 +305,7 @@ DEPENDENCIES
   jquery-rails
   letter_opener
   listen
+  pry
   pry-rails
   rails (= 5.2)
   rails-erd
@@ -319,4 +320,4 @@ DEPENDENCIES
   uglifier
 
 BUNDLED WITH
-   1.16.1
+   1.16.2

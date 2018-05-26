@@ -1,0 +1,6 @@
+- top = top_commenters
+- for t in top
+  %ul.list-group
+    %li.list-group-item
+      %span.badge= t.comments_count
+      = t.name
