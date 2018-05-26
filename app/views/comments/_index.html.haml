@@ -1,0 +1,9 @@
+- @movie.comments.each do |f|
+  .panel.panel-default.comment-panel
+    .panel-heading.text-center
+      %h3.panel-title.comment-panel.title= f.name
+      %p.created_at= time_ago_in_words(f.created_at) + ' ago'
+      .panel-body
+        = f.body
+      - if user_signed_in? && current_user.id == f.user_id
+        = link_to 'Delete', [f.movie, f], method: :delete, class: 'btn btn-danger'
