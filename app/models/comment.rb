@@ -2,7 +2,7 @@ class Comment < ApplicationRecord
   default_scope { order('created_at DESC') }
 
   belongs_to :movie
-  belongs_to :user
+  belongs_to :user, counter_cache: true
 
   validates :body, presence: true
   validates :user_id, presence: true
