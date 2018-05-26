@@ -1,0 +1,12 @@
+%h2.text-center Add a comment
+.text-center
+  = form_for([@movie, Comment.new]) do |comment|
+    - if @comment && @comment.errors.any?
+      - @comment.errors.messages.values.flatten.each do |msg|
+        %li.error= msg
+        %br/
+    = comment.label :comment
+    %br/
+    = comment.text_area :body, size: "60x12"
+    %br/
+    = comment.submit 'Add Comment', class: 'add-comment'
